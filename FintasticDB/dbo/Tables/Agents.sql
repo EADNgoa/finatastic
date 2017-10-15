@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Agents]
+(
+	[AgentID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Agent] VARCHAR(50) NULL
+)

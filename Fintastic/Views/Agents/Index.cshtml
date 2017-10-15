@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Fintastic.Agent>
+
+@{
+    ViewBag.Title = "Agents";
+}
+
+<h2>Agents</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateEdit")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Agents
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item._Agent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "CreateEdit", new { id=item.AgentID }) 
+            
+        </td>
+    </tr>
+}
+
+</table>

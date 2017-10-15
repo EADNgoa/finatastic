@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Fintastic.Bank>
+
+@{
+    ViewBag.Title = "Banks";
+}
+
+<h2>Banks</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Bank Name
+        </th>
+        <th>
+            Ac. No.
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item._Bank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AcNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Create", new { id=item.BankID }) 
+        </td>
+    </tr>
+}
+
+</table>

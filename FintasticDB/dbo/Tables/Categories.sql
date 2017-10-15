@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Categories]
+(
+	[CatID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Category] NCHAR(10) NULL, 
+    [InOut] BIT NOT NULL DEFAULT 1
+)

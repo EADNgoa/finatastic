@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[MFs]
+(
+	[MFID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Active] BIT NOT NULL DEFAULT 1, 
+    [Scheme] VARCHAR(80) NOT NULL, 
+    [AgentID] INT NOT NULL, 
+    [Folio] VARCHAR(50) NULL, 
+    [ISIN] VARCHAR(50) NULL, 
+    CONSTRAINT [FK_MFs_ToAgent] FOREIGN KEY (AgentID) REFERENCES [Agents]([AgentID])
+)

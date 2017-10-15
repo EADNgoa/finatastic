@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[MFPerf]
+(
+	[TDate] DATE NOT NULL , 
+    [MFID] INT NOT NULL, 
+    [Amount] DECIMAL(10, 2) NULL, 
+    [Yeild] DECIMAL(5, 2) NULL, 
+    PRIMARY KEY ([TDate], [MFID]), 
+    CONSTRAINT [FK_MFPerf_ToMFs] FOREIGN KEY (MFID) REFERENCES [MFs]([MFID])
+)
